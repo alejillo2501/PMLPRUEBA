@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>PLM PRUEBA</title>
+  </head>
+  <body>
+    <h1>REGISTRO USUARIOS</h1>
+    <input type="hidden" id="baseUrl" value="{{baseUrl}}">
+
+    <div class="container">
+
+    <div class="row">  
+      <form action="{{baseUrl}}/registrar_usuario" method="post" enctype="multipart/form-data">
+         <div class="col-12">
+            Nombres <span>*</span>
+            <input type="text" id="nombre" name="nombre">
+            </div>
+
+             <div class="col-12">
+            Apellidos <span>*</span>
+            <input type="text" id="apellido" name="apellido">
+            </div>
+
+            <div class="col-6" >
+            Tipo de documento <span>*</span>
+            <select id="tp_documento" name="tp_documento" required>
+            <option value="">Seleccionar</option>
+            <option value="CÉDULA DE CIUDADANIA" >CÉDULA DE CIUDADANIA</option>
+            <option value="CÉDULA DE EXTRANJERIA" >CÉDULA DE EXTRANJERIA</option>
+            <option value="PASAPORTE" >PASAPORTE</option>
+            <option value="REGISTRO CIVIL" >REGISTRO CIVIL</option>
+            <option value="TARJETA DE IDENTIDAD" >TARJETA DE IDENTIDAD</option>
+            <option value="ADULTO SIN IDENTIFICACIÓN" >ADULTO SIN IDENTIFICACIÓN</option>
+            <option value="MENOR SIN IDENTIFICACIÓN" >MENOR SIN IDENTIFICACIÓN</option>
+            <option value="NÚMERO ÚNICO DE IDENTIFICACIÓN" >NÚMERO ÚNICO DE IDENTIFICACIÓN</option>
+            <option value="NIT" >NIT</option>
+            </select>
+            </div>
+
+            <div class="group-form col-12">
+            Documento <span>*</span>
+            <input type="text" class="onlynum" id="documento" maxlength="12" name="documento" required>
+            </div>   
+
+            <div class="group-form col-12">
+            Correo electrónico <span>*</span>
+            <input type="email" id="emal" name="email" required>
+            </div>
+
+            <div class="group-form col-12">
+            Celular <span>*</span>
+            <input type="text" class="onlynum" maxlength="12" id="celular" name="celular" required>
+            </div>
+
+            <div class="group-form col-12">
+            Fecha de nacimiento <span>*</span>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+
+            <div class="group-form col-12">
+            Archivo <span>*</span>
+            <input type="file" id="frmArchivo" name="frmArchivo" required>
+            </div>
+            <button type="submit" name="button">ENVIAR</button>
+        
+      </form>    
+
+    </div> 
+
+    
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {# <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> #}
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      $('.onlynum').on('keyup', function() {
+        this.value = this.value.replace(/[^0-9]/g,'');
+      })    
+    </script>
+  </body>
+</html>

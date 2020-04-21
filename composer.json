@@ -1,0 +1,17 @@
+{
+    "require": {
+    	"slim/slim": "3.*",
+        "slim/twig-view": "*",
+        "slim/flash": "^0.4.0",
+        "illuminate/database" : "5.4.*",
+        "robmorgan/phinx": "^0.4.4",
+        "vlucas/phpdotenv": "^2.4",
+        "nategood/httpful": "*",
+        "phpoffice/phpspreadsheet": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}
